@@ -1,39 +1,48 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo-design.png'
 import { FaBars, FaChevronDown, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const navItems = [
   {
     name: 'Buy',
+    path:'/buy',
     subItems: ['Homes for Sale', 'Open Houses', 'New Listings']
   },
   {
     name: 'Rent',
+    path:'/rent',
     subItems: ['Apartments for Rent', 'Houses for Rent', 'All Rentals']
   },
   {
     name: 'Sell',
+    path:'/sell',
     subItems: ['Sell Your Home', 'Home Value Estimator']
   },
   {
     name: 'Get a mortgage',
+    path:'/getamortage',
     subItems: ['Mortgage Rates', 'Affordability Calculator']
   },
   {
     name: 'Find an Agent',
+    path:'/findanagent',
     subItems: ['Real Estate Agents', 'Mortgage Brokers']
   },
   {
     name: 'Manage Rentals',
+    path:'/managerentals',
     subItems: ['List a Rental', 'Tenant Screening']
   },
   {
     name: 'Advertise',
+    path:'/advertise',
     subItems: ['Advertising Solutions']
   },
   {
     name: 'Help',
+    path:'/help',
     subItems: ['Support Center', 'Contact Us']
   }
 ];
@@ -50,6 +59,8 @@ const secondHalf=navItems.slice(5)
   return (
  <div>
   <nav className="flex justify-between items-center p-4 shadow-sm relative">
+
+    
     <div className="lg:hidden flex justify-between items-center w-full">
       <button onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
@@ -63,7 +74,7 @@ const secondHalf=navItems.slice(5)
       <div className="flex gap-6 items-center">
         {firstHalf.map((item) => (
           <div key={item.name} className="relative group">
-            <button className="hover:text-blue-600  cursor-pointer  xl:text-lg">{item.name}</button>
+            <Link to={item.path} className="hover:text-blue-600  cursor-pointer  xl:text-lg">{item.name}</Link>
             <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-10">
               {item.subItems.map((sub, i) => (
                 <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>
@@ -78,7 +89,7 @@ const secondHalf=navItems.slice(5)
       <div className="flex gap-6 items-center">
         {secondHalf.map((item) => (
           <div key={item.name} className="relative group">
-            <button className="hover:text-blue-600  cursor-pointer xl:text-lg">{item.name}</button>
+            <Link to={item.path} className="hover:text-blue-600  cursor-pointer xl:text-lg">{item.name}</Link>
             <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-10">
               {item.subItems.map((sub, i) => (
                 <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>

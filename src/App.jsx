@@ -1,22 +1,26 @@
 
 import './App.css'
-import AboutSection from './components/AboutSection'
-import BuyabilitySection from './components/BuyabilitySection'
-import Cards from './components/Cards'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import Footer from './components/Footer'
-import Header from './components/Header'
-import Header2 from './components/Header2'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Agents from './pages/Agents';
+
 
 function App() {
  
 
   return (
     <>
+    <Router>
      <Navbar/>
-     <Home/> 
+     <Routes>
+     <Route path='/' element={<Home/>}/>
+     <Route path='/findanagent' element={<Agents/>}/>
+     </Routes>
     <Footer/>
+    </Router>
     </>
   )
 }
