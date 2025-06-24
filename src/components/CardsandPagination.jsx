@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import agentsData from "./agentsData";
 
 const CardsandPagination = ({ activeTab, searchInput }) => {
@@ -41,9 +42,10 @@ const CardsandPagination = ({ activeTab, searchInput }) => {
      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {visibleAgents.map((agent, index) => (
-          <div
+          <Link
+          to={`/agent/${encodeURIComponent(agent.name)}`}
             key={index}
-            className="bg-white rounded-xl shadow-xl overflow-hidden flex h-48 sm:h-56"
+            className="bg-white rounded-xl shadow-xl overflow-hidden flex h-48 sm:h-56 hover:shadow-2xl transition"
           >
            
             <img
@@ -62,7 +64,7 @@ const CardsandPagination = ({ activeTab, searchInput }) => {
                 {agent.lastYearSales} sales last year • {agent.totalSales} total
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
