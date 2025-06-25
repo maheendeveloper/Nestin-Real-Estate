@@ -73,7 +73,7 @@ const Navbar = () => {
             {firstHalf.map((item) => (
               <div key={item.name} className="relative group">
                 <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">{item.name}</Link>
-                <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-10">
+                <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-50">
                   {item.subItems.map((sub, i) => (
                     <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>
                   ))}
@@ -88,7 +88,7 @@ const Navbar = () => {
             {secondHalf.map((item) => (
               <div key={item.name} className="relative group">
                 <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">{item.name}</Link>
-                <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-10">
+                <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-50">
                   {item.subItems.map((sub, i) => (
                     <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>
                   ))}

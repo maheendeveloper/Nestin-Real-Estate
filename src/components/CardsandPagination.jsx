@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import agentsData from "./agentsData";
+import agentsData from "../Data/agentsData";
 
 const CardsandPagination = ({ activeTab, searchInput }) => {
   const [currentPage, setCurrentPage] = useState(1);

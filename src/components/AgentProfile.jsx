@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import agentsData from "./agentsData";
+import agentsData from "../Data/agentsData";
 
 const AgentProfile = () => {
   const { name } = useParams();

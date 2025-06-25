@@ -7,6 +7,9 @@ import Agents from "./pages/Agents";
 import AgentProfile from "./components/AgentProfile";
 import Sell from "./pages/Sell";
 import Help from "./pages/Help";
+import MapView from "./components/MapView";
+import MapWithSidebar from "./components/MapwithSideBar";
+import Rent from "./pages/Rent";
 
 
 function AppLayout() {
@@ -17,9 +20,10 @@ function AppLayout() {
   return (
     <>
       {!ShouldHideLayout && <Navbar />}
-
+      
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/rent" element={<Rent/>}/>
         <Route path="/findanagent" element={<Agents />} />
         <Route path="/agent/:name" element={<AgentProfile />} />
         <Route path="/sell" element={<Sell />} />
