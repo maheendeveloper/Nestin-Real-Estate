@@ -60,42 +60,68 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex justify-between items-center p-4 shadow-sm relative">
+        {/* Mobile Header */}
         <div className="lg:hidden flex justify-between items-center w-full">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
           </button>
           <img src={logo} alt="logo" className="h-6" />
-          <a href="/" className="font-medium hover:text-blue-600">Sign In</a>
+          <Link
+            to="/signin"
+            className="font-medium hover:text-blue-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sign In
+          </Link>
         </div>
 
+        {/* Desktop Menu */}
         <div className="hidden lg:flex justify-between items-center w-full py-1.5 max-w-screen-xl mx-auto">
           <div className="flex gap-6 items-center">
             {firstHalf.map((item) => (
               <div key={item.name} className="relative group">
-                <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">{item.name}</Link>
+                <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">
+                  {item.name}
+                </Link>
                 <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-50">
                   {item.subItems.map((sub, i) => (
-                    <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>
+                    <button
+                      key={i}
+                      className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
+                    >
+                      {sub}
+                    </button>
                   ))}
                 </div>
               </div>
             ))}
           </div>
+
           <div className="mx-10">
             <img src={logo} alt="logo" className="h-6 cursor-pointer xl:h-9" />
           </div>
+
           <div className="flex gap-6 items-center">
             {secondHalf.map((item) => (
               <div key={item.name} className="relative group">
-                <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">{item.name}</Link>
+                <Link to={item.path} className="hover:text-blue-600 cursor-pointer xl:text-lg">
+                  {item.name}
+                </Link>
                 <div className="absolute hidden group-hover:block bg-white shadow-md rounded py-2 mt-1 w-48 z-50">
                   {item.subItems.map((sub, i) => (
-                    <a key={i} href="/" className="block px-4 py-2 hover:bg-gray-100">{sub}</a>
+                    <button
+                      key={i}
+                      className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
+                    >
+                      {sub}
+                    </button>
                   ))}
                 </div>
               </div>
             ))}
-            <a href="/" className="hover:text-blue-600 xl:text-lg">Sign In</a>
+            <Link to="/signin" className="hover:text-blue-600 xl:text-lg">
+              Sign In
+            </Link>
           </div>
         </div>
       </nav>
@@ -120,9 +146,12 @@ const Navbar = () => {
               {activeDropDown === item.name && (
                 <div className="mt-2 ml-4 flex flex-col">
                   {item.subItems.map((sub, i) => (
-                    <a key={i} href="#" className="py-1 text-sm hover:underline cursor-pointer hover:text-blue-600">
+                    <button
+                      key={i}
+                      className="py-1 text-sm hover:underline text-left hover:text-blue-600"
+                    >
                       {sub}
-                    </a>
+                    </button>
                   ))}
                 </div>
               )}
