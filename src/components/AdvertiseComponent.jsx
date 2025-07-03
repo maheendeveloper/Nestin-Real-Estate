@@ -101,56 +101,50 @@ const AdvertiseComponent = () => {
       </div>
 
       <div className="bg-blue-900 text-white p-10 min-h-screen">
-  <h2 className="text-3xl font-bold text-center mb-24 mt-16">
-    Nestin Group Audience
-  </h2>
-  <div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center px-7 lg:px-28">
-      {/* Section 1 */}
-      <div className="flex flex-col items-center">
-        <FaSign className="text-blue-500 text-[150px] mb-4" />
-        <h3 className="text-xl font-bold mb-2">41% to buy or sell</h3>
-        <p>
-          Nearly 41% of people who visited Nestin and/or Trulia in the
-          past 12 months are planning to buy and/or sell a home in the
-          next 12 months.
-        </p>
+        <h2 className="text-3xl font-bold text-center mb-24 mt-16">
+          Nestin Group Audience
+        </h2>
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center px-7 lg:px-28">
+            <div className="flex flex-col items-center">
+              <FaSign className="text-blue-500 text-[150px] mb-4" />
+              <h3 className="text-xl font-bold mb-2">41% to buy or sell</h3>
+              <p>
+                Nearly 41% of people who visited Nestin and/or Trulia in the
+                past 12 months are planning to buy and/or sell a home in the
+                next 12 months.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <FaHome className="text-blue-500 text-[150px] mb-4" />
+              <h3 className="text-xl font-bold mb-2">194 million</h3>
+              <p>
+                More than 194 million average monthly unique users visited
+                Nestin Group brands’ mobile apps and websites in Q2 2019.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <MdApartment className="text-blue-500 text-[150px] mb-4" />
+              <h3 className="text-xl font-bold mb-2">
+                Most visited rental network
+              </h3>
+              <p>Nestin Rentals is the most visited rental network.</p>
+            </div>
+          </div>
+
+          <p className="text-xs text-center mt-16 max-w-5xl mx-auto text-gray-300 px-6">
+            Source: 41% stat: Nestin Group Tracking Survey, Q2 2019. 194 million
+            stat: Google Analytics and Adobe Analytics. Rental network claim:
+            Comscore Media Metrix® Multi-Platform, Key Measures, Custom-defined
+            list including: Nestin Rentals, Apartments.com Network, RentPath
+            Network, ForRent.com & Homes.com Network, Total Visits, July 2020,
+            United States. Nestin Rentals is the deduplicated reach of
+            Nestin.com Rentals, Trulia.com Rentals and HotPads.com.
+          </p>
+        </div>
       </div>
-
-      {/* Section 2 */}
-      <div className="flex flex-col items-center">
-        <FaHome className="text-blue-500 text-[150px] mb-4" />
-        <h3 className="text-xl font-bold mb-2">194 million</h3>
-        <p>
-          More than 194 million average monthly unique users visited
-          Nestin Group brands’ mobile apps and websites in Q2 2019.
-        </p>
-      </div>
-
-      {/* Section 3 */}
-      <div className="flex flex-col items-center">
-        <MdApartment className="text-blue-500 text-[150px] mb-4" />
-        <h3 className="text-xl font-bold mb-2">
-          Most visited rental network
-        </h3>
-        <p>Nestin Rentals is the most visited rental network.</p>
-      </div>
-    </div>
-
-    {/* Move this paragraph OUTSIDE the grid */}
-    <p className="text-xs text-center mt-16 max-w-5xl mx-auto text-gray-300 px-6">
-      Source: 41% stat: Nestin Group Tracking Survey, Q2 2019. 194
-      million stat: Google Analytics and Adobe Analytics. Rental network
-      claim: Comscore Media Metrix® Multi-Platform, Key Measures,
-      Custom-defined list including: Nestin Rentals, Apartments.com
-      Network, RentPath Network, ForRent.com & Homes.com Network, Total
-      Visits, July 2020, United States. Nestin Rentals is the
-      deduplicated reach of Nestin.com Rentals, Trulia.com Rentals and
-      HotPads.com.
-    </p>
-  </div>
-</div>
-
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import header from '../assets/header.jpg'
+import header1 from '../assets/header1.jpg'
 
 const Header2 = () => {
   return (
@@ -11,7 +11,7 @@ const Header2 = () => {
           <button className='text-blue-600 font-bold px-3 py-2  border rounded-md self-center border-blue-600 mb-10 hover:bg-blue-600 hover:text-white cursor-pointer lg:px-4 lg:py-3'>Sign In</button>
           </div>
           <div>
-            <img className='w-100 shadow-2xl  md:mr-5 mb-10 md:w-[400px] lg:w-[500px]' src={header}/>
+            <img className='w-100 shadow-2xl  md:mr-5 mb-10 md:w-[400px] lg:w-[500px]' src={header1}/>
           </div>
       </div>
     </div>

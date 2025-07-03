@@ -11,6 +11,7 @@ import Rent from "./pages/Rent";
 import SignIn from "./pages/SignIn";
 import Advertise from "./pages/Advertise";
 import ManageRentals from "./pages/ManageRentals";
+import GetAMortage from "./pages/GetAMortage";
 
 function AppLayout() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function AppLayout() {
         <Route path="/managerentals" element={<ManageRentals/>}/>
         <Route path="/advertise" element={<Advertise/>}/>
         <Route path="/sell" element={<Sell />} />
+        <Route path="/getamortage" element={<GetAMortage />} />
         <Route path="/help" element={<Help />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>

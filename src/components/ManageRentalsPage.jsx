@@ -52,7 +52,7 @@ const ManageRentalsPage = () => {
 
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
 
-        <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center">
+        <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center lg:px-16">
           <div className="text-white px-6 sm:px-12 lg:px-20 max-w-2xl">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-snug">
               Level up your landlording <br /> simply and confidently

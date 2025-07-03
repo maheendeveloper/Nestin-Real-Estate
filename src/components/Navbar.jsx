@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const navItems = [
     {
-      name: 'Buy',
-      path: '/buy',
-      subItems: ['Homes for Sale', 'Open Houses', 'New Listings']
-    },
-    {
       name: 'Rent',
       path: '/rent',
       subItems: ['Apartments for Rent', 'Houses for Rent', 'All Rentals']
@@ -54,8 +49,8 @@ const Navbar = () => {
     setActiveDropDown(activeDropDown === item ? null : item);
   };
 
-  const firstHalf = navItems.slice(0, 5);
-  const secondHalf = navItems.slice(5);
+  const firstHalf = navItems.slice(0, 4);
+  const secondHalf = navItems.slice(4);
 
   return (
     <div>
